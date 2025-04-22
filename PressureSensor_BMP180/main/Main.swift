@@ -1,11 +1,16 @@
 @_cdecl("app_main")
 func main() {
 
-  let sensor = PressureSensor()
+  let pressureSensor = BMP180()
+  let dht11Sensor = DHT22()
   while true {
-    let (temperature, pressure) = sensor.measure()
+    let (temperature, pressure) = pressureSensor.measure()
     print("Temperature: \(format(double: Double(temperature)))°C Pressure: \(pressure)Pa")
-    print("Altitude: \(format(double: sensor.readAltitude()))m")
+    print("Altitude: \(format(double: pressureSensor.readAltitude()))m")
+
+    let (humidity, temperature2) = dht11Sensor.measure()
+    print("Temperature: \(format(double: Double(temperature2)))°C Humidity: \(format(double: Double(humidity)))%")
+    print(String(repeating: "-", count: 40))
     vTaskDelay(1000 / (1000 / UInt32(configTICK_RATE_HZ)))
   }
 }

@@ -5,3 +5,4 @@
 #include "sdkconfig.h"
 
 #include "bmp180/bmp180.h"
+#include "dht.h"

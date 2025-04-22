@@ -1,5 +1,5 @@
 
-class PressureSensor {
+class BMP180 {
 
   private let ctx: bmp180_t
 

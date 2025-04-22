@@ -63,7 +63,8 @@ enable_language(Swift)
 target_sources(${COMPONENT_LIB}
     PRIVATE
     Main.swift
-    PressureSensor.swift
+    BMP180.swift
+    DHT22.swift
 )
 
 add_custom_command(
