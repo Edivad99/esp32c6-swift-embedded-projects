@@ -1,0 +1,21 @@
+{
+  "idf.customExtraVars": {
+    "IDF_TARGET": "esp32c6"
+  },
+  "idf.port": "/dev/tty.wchusbserial59590335801",
+  "idf.openOcdConfigs": [
+    "board/esp32c6-builtin.cfg"
+  ],
+  "idf.flashType": "UART",
+  "swift.swiftEnvironmentVariables": {
+    "DEVELOPER_DIR": "/Applications/Xcode.app",
+  },
+  "swift.path": "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2025-04-12-a.xctoolchain/usr/bin",
+  "lldb.library": "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2025-04-12-a.xctoolchain/System/Library/PrivateFrameworks/LLDB.framework/Versions/A/LLDB",
+  "lldb.launch.expressions": "native",
+  "files.associations": {
+    ".fantomasignore": "ignore",
+    "sys_esp.h": "c",
+    "sys_linux.h": "c"
+  },
+}
